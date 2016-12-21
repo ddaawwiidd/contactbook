@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Contact book</title>
+  <meta name="description" content="Contact book training project.">
+  <meta name="author" content="Dawid Jankowski">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/icon_contact3.png">
+
+</head>
+<body onLoad="Contacts.init()">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+	  <div class="row">
+      <div class="one-half column" style="margin-top: 10%">
+        <a href="https://github.com/ddaawwiidd/sugarApp/blob/gh-pages/README.md">
+			<img src="images/icon_contact3.png" alt="Contacts" height="180" width="180">
+		</a>
+		<h4>Contact book</h4>
+        
+      </div>
+    </div>
+	<form>
+		<div class="row">
+			<div class="six columns">
+				<label for="emailInput">Name</label>
+				<input class="u-full-width" type="text" placeholder="Tom" id="nameInput">
+			</div>
+			<div class="six columns">
+				<label for="phoneNumberInput">Surname</label>
+				<input class="u-full-width" type="text" placeholder="Smith" id="surnameInput">
+			</div>
+		</div>
+		<div class="row">
+			<div class="six columns">
+				<label for="emailInput">Email address</label>
+				<input class="u-full-width" type="email" placeholder="example@email.com" id="emailInput">
+			</div>
+			<div class="six columns">
+				<label for="phoneNumberInput">Phone number</label>
+				<input class="u-full-width" type="text" placeholder="+48 123 456 789" id="phoneInput">
+			</div>
+		</div>
+		<input class="button" type="button" value="Save" onclick="Contacts.takeContact()">
+		<input class="button-primary" type="button" value="Search" onclick="Contacts.search()">
+	</form>
+	<table class="u-full-width">
+	  <thead>
+		<tr>
+		  <th>Name</th>
+		  <th>Surname</th>
+		  <th>Email</th>
+		  <th>Phone number</th>
+		  <th></th>
+		</tr>
+	  </thead>
+	  <tbody id="result">
+	  </tbody>
+	</table>
+	<div class="row">
+		<input class="button" type="button" value="Delete all contact data" onclick="Contacts.storeRemove()">
+	</div>
+	
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script src="js/engine.js"></script>
+</body>
+</html>
