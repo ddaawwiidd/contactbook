@@ -1,5 +1,7 @@
 # Contact book
 
+<p>Training app created to practice OOP in JS and test automation.</p>
+
 <h5>Features:</h5> 
 <ul>
 <li>Save new contact</li>
