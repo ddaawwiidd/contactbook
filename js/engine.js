@@ -36,9 +36,9 @@ var Contacts = {
 		var print = "";
 		for (var i = 0; i < this.contacts.length; i++){
 			if(this.contacts[i].name == parameter.name || this.contacts[i].surname == parameter.surname || this.contacts[i].email == parameter.email || this.contacts[i].phone == parameter.phone ){
-				print += "<tr><td>"+this.contacts[i].name + "</td><td>" + this.contacts[i].surname + "</td><td>" + this.contacts[i].email + "</td><td>" + this.contacts[i].phone + "</td><td> <input class='button-primary' type='button' onclick='Contacts.editRecord(\""+i+"\")' value='Edit'> <input class='button' type='button' value='Remove' onclick='Contacts.removeRecord(\""+i+"\")'>" +"</td></tr>";
+				print += "<tr><td>"+this.contacts[i].name + "</td><td>" + this.contacts[i].surname + "</td><td>" + this.contacts[i].email + "</td><td>" + this.contacts[i].phone + "</td><td> <input id=\""+i+"\" class='button-primary' type='button' onclick='Contacts.editRecord(\""+i+"\")' value='Edit'> <input id=\""+i+"\" class='button' type='button' value='Remove' onclick='Contacts.removeRecord(\""+i+"\")'>" +"</td></tr>";
 			} else if (parameter.name == "" && parameter.surname == "" && parameter.email == "" && parameter.phone == ""){
-				print += "<tr><td>"+this.contacts[i].name + "</td><td>" + this.contacts[i].surname + "</td><td>" + this.contacts[i].email + "</td><td>" + this.contacts[i].phone + "</td><td> <input class='button-primary' type='button' onclick='Contacts.editRecord(\""+i+"\")' value='Edit'> <input class='button' type='button' value='Remove' onclick='Contacts.removeRecord(\""+i+"\")'>" +"</td></tr>";
+				print += "<tr><td>"+this.contacts[i].name + "</td><td>" + this.contacts[i].surname + "</td><td>" + this.contacts[i].email + "</td><td>" + this.contacts[i].phone + "</td><td> <input id=\""+i+"\" class='button-primary' type='button' onclick='Contacts.editRecord(\""+i+"\")' value='Edit'> <input id=\""+i+"\" class='button' type='button' value='Remove' onclick='Contacts.removeRecord(\""+i+"\")'>" +"</td></tr>";
 			};
 		};
 		document.getElementById("result").innerHTML = print;
